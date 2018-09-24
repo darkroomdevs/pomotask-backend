@@ -8,9 +8,9 @@
   <inceptionYear>2018</inceptionYear>
   <licenses>
     <license>
-      <name>My License</name>
-      <url>http://....</url>
-      <distribution>repo</distribution>
+      <name>MIT</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>git@github.com:darkroomdevs/pomotask-backend.git</distribution>
     </license>
   </licenses>
 
