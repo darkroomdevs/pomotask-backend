@@ -1,2 +1,4 @@
 *.class
 *.log
+/pomotask-backend.iml
+/.idea/
