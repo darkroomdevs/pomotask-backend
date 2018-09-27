@@ -25,9 +25,11 @@ http://www.scalatest.org/
 One way to use ScalaTest is to help make JUnit or TestNG tests more
 clear and concise. Here's an example:
 */
-import scala.collection._
-import org.scalatest.Assertions
+
 import org.junit.Test
+import org.scalatest.Assertions
+
+import scala.collection._
 
 class StackSuite extends Assertions {
 
@@ -50,28 +52,28 @@ class StackSuite extends Assertions {
 /*
 Here's an example of a FunSuite with Matchers mixed in:
 */
-import org.scalatest.FunSuite
-import org.scalatest.Matchers
 
 import org.junit.runner.RunWith
+import org.scalatest.{FunSuite, Matchers}
 import org.scalatest.junit.JUnitRunner
+
 @RunWith(classOf[JUnitRunner])
 class ListSuite extends FunSuite with Matchers {
 
   test("An empty list should be empty") {
-    List() should be ('empty)
-    Nil should be ('empty)
+    List() should be('empty)
+    Nil should be('empty)
   }
 
   test("A non-empty list should not be empty") {
-    List(1, 2, 3) should not be ('empty)
-    List("fee", "fie", "foe", "fum") should not be ('empty)
+    List(1, 2, 3) should not be 'empty
+    List("fee", "fie", "foe", "fum") should not be 'empty
   }
 
   test("A list's length should equal the number of elements it contains") {
-    List() should have length (0)
-    List(1, 2) should have length (2)
-    List("fee", "fie", "foe", "fum") should have length (4)
+    List() should have length 0
+    List(1, 2) should have length 2
+    List("fee", "fie", "foe", "fum") should have length 4
   }
 }
 
@@ -84,6 +86,7 @@ A Map
 - should only contain keys and values that were added to it
 - should report its size as the number of key/value pairs it contains
 */
+
 import org.scalatest.FunSpec
 
 class ExampleSpec extends FunSpec {

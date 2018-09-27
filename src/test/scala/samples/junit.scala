@@ -1,17 +1,15 @@
 package samples
 
+import org.assertj.core.api.Assertions._
 import org.junit._
-import Assert._
 
 @Test
+//noinspection ScalaFileName
 class AppTest {
 
-    @Test
-    def testOK() = assertTrue(true)
+  @Test
+  def testOK(): Unit = assertThat(true).isTrue
 
-//    @Test
-//    def testKO() = assertTrue(false)
-
+  @Test
+  def testKO(): Unit = assertThat(false).isFalse
 }
-
-
